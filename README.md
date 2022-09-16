@@ -2,6 +2,8 @@
 
 Transducers by example:
 
+### Contents
+
 - a: The `reduce` function
 - b: The `transduce` function
 - c: The `eduction` function
@@ -9,3 +11,7 @@ Transducers by example:
 - e: Problem solution using transducers
 - f: Transducer Exercises
 - z: Exercise Solutions
+
+### Test
+
+`lein spec -a`
