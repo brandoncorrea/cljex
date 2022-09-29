@@ -27,6 +27,7 @@ Function composition by example:
 - e: The `some-fn` function
 - f: The `every-pred` function
 - g: The `fnil` function
+- h: More on function composition
 
 ### Test
 
