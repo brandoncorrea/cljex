@@ -1,4 +1,4 @@
-(ns duce.c-eduction-spec
+(ns cljex.duce.c-eduction-spec
   "Eduction is basically just transduce without the comp function.
    It takes any number of arguments, with the last always being the
    collection to transduce on."
