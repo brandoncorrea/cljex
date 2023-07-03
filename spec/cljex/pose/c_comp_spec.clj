@@ -8,9 +8,10 @@
   (it "no arguments results in the identity function"
     (should= identity (comp)))
 
-  (it "one argument results in that function"
+  (it "one argument results in that same argument"
     (should= + (comp +))
-    (should= every? (comp every?)))
+    (should= every? (comp every?))
+    (should= "boo!" (comp "boo!")))
 
   (it "is basically a function that reads like a backwards thread form"
     (let [f       (comp even? inc :a)

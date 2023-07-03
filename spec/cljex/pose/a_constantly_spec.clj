@@ -4,7 +4,7 @@
 
 (describe "constantly"
 
-  (it "'constantly' returns the same value"
+  (it "will 'constantly' return the same value"
     (let [f (constantly 10)]
       (should= 10 (f nil))
       (should= 10 (f 0))

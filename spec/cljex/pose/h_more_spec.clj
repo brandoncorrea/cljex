@@ -1,10 +1,11 @@
 (ns cljex.pose.h-more-spec
   "Composing functions create new values.
-   References to the functions being composed are lost"
+   References to the functions being composed are lost."
   (:require [speclj.core :refer :all]))
 
 (defn times-two [n] (* 2 n))
 (defn times-six [n] (times-two (* 3 n)))
+(def missing-intellisense (comp :c :b :a))
 
 (describe "A Composed Function"
 
@@ -21,8 +22,8 @@
   (it "can redefined calls within other functions, but not those in composed (and pre-evaluated) functions"
     (let [times-twelve (comp times-two times-six)]
       (should= (times-twelve 2) (times-two (times-six 2)))
-      (should= (times-twelve 2) (* 2 (* 2 (* 3 2))))
       (should= (times-twelve 2) 24)
+      (should= (times-twelve 2) (* 2 (times-two (* 3 2))))
       (with-redefs [times-two inc]
         (should= (times-twelve 2) (* 2 (inc (* 3 2))))
         (should= (times-twelve 2) 14))))
@@ -43,4 +44,20 @@
           thing {:a 1 :b 2}]
       (should= 3 (ab-1 thing))
       (should= 3 (ab-2 thing))
-      (should= 3 (+ (:a thing) (:b thing))))))
+      (should= 3 (+ (:a thing) (:b thing)))))
+
+  (it "is best for map and filter -type functions"
+    (let [things [{:a {:b {:c 1}}}
+                  {:a {:b {:c 2}}}
+                  {:a {:b {:c 3}}}]]
+      (should= [1 2 3] (map #(-> % :a :b :c) things))
+      (should= [1 2 3] (map (comp :c :b :a) things))
+      (should= [{:a {:b {:c 2}}}] (filter #(-> % :a :b :c even?) things))
+      (should= [{:a {:b {:c 2}}}] (filter (comp even? :c :b :a) things))))
+
+  (it "is unnecessary when only one parameter is provided"
+    (let [things [{:a 1} {:a 2} {:a 3}]]
+      (should= [1 2 3] (map (partial :a) things))
+      (should= [1 2 3] (map (comp :a) things))
+      (should= [1 2 3] (map :a things))))
+  )

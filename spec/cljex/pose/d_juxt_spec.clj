@@ -10,7 +10,9 @@
           f-ab       (juxt :a :b)
           f-bac      (juxt :b :a :c)
           f-complex  (juxt (comp str :b) :a (comp symbol name :c))
-          thing      {:a :x :b :y :c :z}]
+          thing      {:a :x
+                      :b :y
+                      :c :z}]
       (should= [1] (j-identity 1))
       (should= [:x] (f-a thing))
       (should= [:x :y] (f-ab thing))
@@ -22,8 +24,17 @@
       (should= [9 24 '(2 3 4)] (n-func 2 3 4))))
 
   (it "is useful for sorting by multiple values"
-    (let [things [{:a 1 :b 2} {:a 0 :b 2} {:a 1 :b 1}]]
-      (should= [{:a 0 :b 2} {:a 1 :b 1} {:a 1 :b 2}] (sort-by (juxt :a :b) things))))
+    (let [things [{:a 1 :b 2}
+                  {:a 0 :b 2}
+                  {:a 1 :b 1}]]
+      (should= [{:a 0 :b 2}
+                {:a 1 :b 1}
+                {:a 1 :b 2}]
+               (sort-by (juxt :a :b) things))
+      (should= [{:a 1 :b 1}
+                {:a 0 :b 2}
+                {:a 1 :b 2}]
+               (sort-by (juxt :b :a) things))))
 
   (it "looks like a mapv or a [(:a m) (:b m) (:c m)]"
     (let [thing {:a 1 :b 2 :c 3}
