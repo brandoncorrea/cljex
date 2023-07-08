@@ -1,4 +1,4 @@
-(ns cljex.pose.f_every-pred-spec
+(ns cljex.pose.g_every-pred-spec
   "If 'and' were a function... but doesn't return values (just booleans 😒)"
   (:require [speclj.core :refer :all]))
 

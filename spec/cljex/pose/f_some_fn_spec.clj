@@ -1,4 +1,4 @@
-(ns cljex.pose.e_some-fn-spec
+(ns cljex.pose.f_some-fn-spec
   "If 'or' were a function..."
   (:require [speclj.core :refer :all]))
 

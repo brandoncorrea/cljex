@@ -1,4 +1,4 @@
-(ns cljex.pose.g_fnil-spec
+(ns cljex.pose.h_fnil-spec
   "Rather than wrapping everything with an 'or', we can
    compose functions with default values."
   (:require [speclj.core :refer :all]))

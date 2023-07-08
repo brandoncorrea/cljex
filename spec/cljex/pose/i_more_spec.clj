@@ -1,4 +1,4 @@
-(ns cljex.pose.h-more-spec
+(ns cljex.pose.i-more-spec
   "Composing functions create new values.
    References to the functions being composed are lost."
   (:require [speclj.core :refer :all]))
