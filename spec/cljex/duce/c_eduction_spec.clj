@@ -1,7 +1,7 @@
 (ns cljex.duce.c-eduction-spec
   "Eduction is like sequence without the comp function, but not quite.
    It takes any number of arguments, with the last always being the
-   collection to transduce on."
+   collection to consume."
   (:require [speclj.core :refer :all]))
 
 (describe "Eduction"
