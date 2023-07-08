@@ -1,4 +1,4 @@
-(ns cljex.duce.a-reduce-spec
+(ns cljex.duce.a-reduce
   "Transducers and reducers are very similar.
    Here are a few examples of how reduce works."
   (:require [speclj.core :refer :all]))

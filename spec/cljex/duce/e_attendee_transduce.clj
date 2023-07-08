@@ -1,4 +1,4 @@
-(ns cljex.duce.e-attendee-transduce-spec
+(ns cljex.duce.e-attendee-transduce
   "Transducers look very similar to thread-last operations,
    except instead of threading, we use function composition."
   (:require [speclj.core :refer :all]))

@@ -1,4 +1,4 @@
-(ns cljex.duce.d-attendee-thread-spec
+(ns cljex.duce.d-attendee-thread
   "If we wanted to filter out attendees for an R Rated Movie,
    here's what the code might look like using the thread-last operator."
   (:require [speclj.core :refer :all]))

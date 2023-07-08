@@ -1,4 +1,4 @@
-(ns cljex.pose.c-comp-spec
+(ns cljex.pose.c-comp
   "Think of this one like a backwards thread macro:
    (comp z y x) => #(-> % x y z)"
   (:require [speclj.core :refer :all]))

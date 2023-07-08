@@ -1,4 +1,4 @@
-(ns cljex.pose.a-constantly-spec
+(ns cljex.pose.a-constantly
   "Constantly returns a predefined value... pretty basic composer"
   (:require [speclj.core :refer :all]))
 

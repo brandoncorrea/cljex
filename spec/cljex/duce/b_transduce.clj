@@ -1,4 +1,4 @@
-(ns cljex.duce.b-transduce-spec
+(ns cljex.duce.b-transduce
   "Transducers are functions that create other reducible functions,
    which can then be applied over collections."
   (:require [speclj.core :refer :all]))

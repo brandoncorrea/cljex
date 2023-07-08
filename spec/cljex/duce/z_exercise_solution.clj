@@ -1,4 +1,4 @@
-(ns cljex.duce.z-exercise-solution-spec
+(ns cljex.duce.z-exercise-solution
   "No peeking until you've attempted the exercises!"
   (:require [clojure.string :as s]
             [speclj.core :refer :all]))

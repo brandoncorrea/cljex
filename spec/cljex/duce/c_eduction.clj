@@ -1,4 +1,4 @@
-(ns cljex.duce.c-eduction-spec
+(ns cljex.duce.c-eduction
   "Eduction is like sequence without the comp function, but not quite.
    It takes any number of arguments, with the last always being the
    collection to consume."

@@ -1,4 +1,4 @@
-(ns cljex.pose.d_juxt-spec
+(ns cljex.pose.d-juxt
   "A prettier way of doing [(f1 m) (f2 m) (f3 m) ...]"
   (:require [speclj.core :refer :all]))
 

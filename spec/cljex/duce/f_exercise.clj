@@ -1,4 +1,4 @@
-(ns cljex.duce.f-exercise-spec
+(ns cljex.duce.f-exercise
   "Each context has several test cases.
    Fill out the blank fields to make them pass: ..., xform, xform*, coll, and f.
 

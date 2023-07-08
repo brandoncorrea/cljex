@@ -1,4 +1,4 @@
-(ns cljex.pose.b-partial-spec
+(ns cljex.pose.b-partial
   "Creates a new function with predefined arguments.
    Arguments must be defined in order (cannot be something in the middle)"
   (:require [speclj.core :refer :all])
