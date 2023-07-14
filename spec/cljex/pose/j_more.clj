@@ -5,7 +5,9 @@
 
 (defn times-two [n] (* 2 n))
 (defn times-six [n] (times-two (* 3 n)))
-(def missing-intellisense (comp :c :b :a))
+(def hover-over-me
+  "I'm missing IntelliSense ☹️"
+  (comp :c :b :a))
 
 (describe "A Composed Function"
 

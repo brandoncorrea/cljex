@@ -1,5 +1,5 @@
 (ns cljex.pose.e-complement
-  "You're looking fabulous today 😎! Basically, the logical NOT composer."
+  "You look fabulous today 😎! Basically, the logical NOT composer."
   (:require [clojure.string :refer [blank?]]
             [speclj.core :refer :all]))
 
